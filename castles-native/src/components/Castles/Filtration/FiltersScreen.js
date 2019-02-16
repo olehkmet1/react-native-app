@@ -10,13 +10,9 @@ import {colors} from "../../../assets/variables";
 class FiltersScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
         headerTintColor: 'white',
-        // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
         headerTitle: <View style={{flexDirection: 'column', paddingLeft: 12}}>
             <Text style={styles.detailHeader}>Filter</Text>
         </View>,
-        // headerLeft:  <Icon name="menu" style={styles.headerIcon} onPress={() => navigation.toggleDrawer()} />,
-        // headerRight: <View style={{flexDirection:'row', paddingRight: 12}}>
-        //     <Icon name="mic" style={styles.headerIcon} onPress={() => navigation.navigate('Filters')} /></View>,
         headerStyle: {
             backgroundColor: colors.mainColor,
         },

@@ -90,28 +90,20 @@ class CastlesMain extends Component {
 
         this.setState({ loading: true });
         const url = `${BASE_URL}/api/users?page=${this.state.page}`;
-        // try {
             return await axios.get(url).then(
                 response => {
-                    // response.data;
                     this.setState({
                         data: this.state.data.concat(response.data.data),
                         loading: false,
                         totalPages: response.data.total_pages,
                         preloader: false
                     });
-                    // console.log(this.state.totalPages,222);
                 }
 
             ).catch(function(error) {
                 console.log('There has been a problem with your fetch operation: ' + error.message);
-                // ADD THIS THROW error
                 throw error;
             });
-        // } catch (error) {
-        //     console.log(error);
-        // }
-
     }
 
     handleEnd = () => {
@@ -132,10 +124,6 @@ class CastlesMain extends Component {
         });
         this.getCastles();
     }
-
-
-
-
     render() {
         return (
             <StyleProvider style={getTheme(material)}>
@@ -155,13 +143,10 @@ class CastlesMain extends Component {
                     renderItem={({ item, index }) =>
                         <View>
                             <Card >
-
-                                {/*<Image style={{flex: 0.5, height: 100}} source={{uri: item.avatar}} />*/}
                             <CardItem style={{padding:0}}>
                                 <Left>
                                     <Thumbnail square source={{uri: item.avatar}} />
-                                    {/*<Image style={{flex: 0.5, height: 100}} source={{uri: 'https://castles.today/assets/uploads/content/148/thumb/bisingen-1.jpg'}}/>*/}
-                                    <Body>
+                                   <Body>
                                     <Text onPress={() => this.props.navigation.navigate('Details', { title: item.name })}>{item.first_name}Castle in Olesko</Text>
                                     <Text note>Ukraine</Text>
                                     </Body>
@@ -170,24 +155,6 @@ class CastlesMain extends Component {
                         </Card></View>
                         }
                     />
-
-
-                    {/*</List>*/}
-                    {/*{this.state.data.map((item) => (*/}
-                    {/*<Card>*/}
-                    {/*<CardItem style={{padding:0}}>*/}
-                    {/*<Left>*/}
-                    {/*<Thumbnail square source={{uri: 'https://castles.today/assets/uploads/content/148/thumb/bisingen-1.jpg'}} />*/}
-                    {/*/!*<Image style={{flex: 0.5, height: 100}} source={{uri: 'https://castles.today/assets/uploads/content/148/thumb/bisingen-1.jpg'}}/>*!/*/}
-                    {/*<Body>*/}
-                    {/*<Text onPress={() => this.props.navigation.navigate('Details', { title: item.name })}>{item.name}Castle in Olesko</Text>*/}
-                    {/*<Text note>Ukraine</Text>*/}
-                    {/*</Body>*/}
-                    {/*</Left>*/}
-                    {/*</CardItem>*/}
-                    {/*</Card>*/}
-                    {/*))}*/}
-                        {/*</ScrollView>*/}
                     </Container>
                         : <PageLoader />
 

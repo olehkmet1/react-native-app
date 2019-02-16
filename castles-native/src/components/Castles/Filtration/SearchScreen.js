@@ -19,50 +19,13 @@ class SearchScreen extends Component {
 
 
     static navigationOptions = ({ navigation }) => {
-    // const { params = {} } = navigation.state;
         return {
             header: null,
-        // headerTintColor: 'white',
-        // // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
-        // headerTitle: <View style={{flexDirection: 'column', paddingLeft: 12}}>
-        //     <Input placeholderTextColor={colors.white}
-        //            style={{color: colors.white, opacity:0.7}}
-        //            placeholder="Search"
-        //            value={params.searchName}
-        //            onChangeText = { (value) => this.onChangeSearch(value) }
-        //     />
-        // </View>,
-        // // headerLeft:  <Icon name="menu" style={styles.headerIcon} onPress={() => navigation.toggleDrawer()} />,
-        // headerRight: <View style={{flexDirection:'row', paddingRight: 12}}>
-        //     <Icon name="mic" style={styles.headerIcon} onPress={() => navigation.navigate('Search')} />
-        //     </View>,
-        // headerStyle: {
-        //     backgroundColor: colors.mainColor,
-        // },
     }};
 
     render() {
         return (
             <Container>
-                {/*<Header rounded style={colors.mainColor}>*/}
-                    {/*<Left>*/}
-                        {/*<Icon name='arrow-back' style={styles.headerIcon}*/}
-                              {/*onPress={() => this.props.navigation.goBack()}/>*/}
-                    {/*</Left>*/}
-                    {/*<View>*/}
-
-                        {/*<Input placeholderTextColor={colors.white}*/}
-                               {/*style={{color: colors.white, opacity:0.7}}*/}
-                               {/*placeholder="Search"*/}
-                               {/*value={this.state.searchName}*/}
-                        {/*/>*/}
-                    {/*</View>*/}
-                    {/*<Right>*/}
-                        {/*<Button transparent>*/}
-                            {/*<Icon name='mic' />*/}
-                        {/*</Button>*/}
-                    {/*</Right>*/}
-                {/*</Header>*/}
                     <Header style={{ backgroundColor: colors.mainColor }}>
                         <Left style={{flex: 0}}>
                             <Icon name='arrow-back' style={styles.headerIcon}
